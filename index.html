@@ -71,7 +71,7 @@ body {
 					delta -= minutes * 60;
 					$("#Minutes").html("<h2>" + minutes + "</h2><h4>Minutes</h4>");
 
-					var seconds = delta % 60; 
+					var seconds = Math.round(delta % 60); 
 					$("#Seconds").html("<h2>" + seconds + "</h2><h4>Seconds</h4>");
 				}, 200);
 			}
