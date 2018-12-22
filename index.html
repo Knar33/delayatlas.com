@@ -4,6 +4,7 @@
         <title>ATLAS: The Countdown Begins...</title>
 		<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.bundle.min.js" integrity="sha384-zDnhMsjVZfS3hiP7oCBRmfjkQC4fzxVxFhBx8Hkz2aZX8gEvA/jsP3eXRCvzTofP" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <style type="text/css">
   @font-face {
     font-family: atlas;
@@ -52,10 +53,27 @@ body {
 </style>
 		<script>
 			function countUp() {
-				var launchDate = new Date(2018, 12, 17, 17, 0, 0, 0);
-				while(true) {
+				var launchDate = new Date(2018, 11, 17, 17, 0, 0, 0);
+				setInterval(function()
+				{ 
 					var nowDate = new Date();
-				}
+					var delta = Math.abs(nowDate - launchDate) / 1000;
+					
+					var days = Math.floor(delta / 86400);
+					delta -= days * 86400;
+					$("#Days").html("<h2>" + days + "</h2><h4>Days</h4>");
+
+					var hours = Math.floor(delta / 3600) % 24;
+					delta -= hours * 3600;
+					$("#Hours").html("<h2>" + hours + "</h2><h4>Hours</h4>");
+
+					var minutes = Math.floor(delta / 60) % 60;
+					delta -= minutes * 60;
+					$("#Minutes").html("<h2>" + minutes + "</h2><h4>Minutes</h4>");
+
+					var seconds = delta % 60; 
+					$("#Seconds").html("<h2>" + seconds + "</h2><h4>Seconds</h4>");
+				}, 200);
 			}
 		</script>
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -67,7 +85,7 @@ body {
         <meta name="theme-color" content="#000000">
 
     </head>
-    <body>
+    <body onLoad="countUp()">
 		<div style="text-align: center;"><img src="logo.png"></div>
         <h1>SET SAIL IN...</h1>
 		<div class="container">
