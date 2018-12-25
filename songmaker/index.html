@@ -1,0 +1,31 @@
+<!DOCTYPE hml>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="css/Site.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/howler.js"></script>
+
+    <title>Atlas Music Maker</title>
+</head>
+
+<body>
+    Enter a song below to generate an autohotkey script. The keys are awsedrfgyhuji, to skip a beat use a space, and to sustain a note use a dash - for as many extra beats you want to sustain. <br>
+    
+    You can change the delay time and the toggle key that starts/stops the macro. <br><br>
+    
+    Song notes: <input type="text" id="song" style="width: 100%"><br>
+    Toggle Key: <input type="text" id="toggleKey" value="F12"><br>
+    Delay Time: <input type="text" id="delayTime" value="200"><br>
+
+    <input type="button" value="Create" onclick="writeMacro()" id="writeMacro"><br>
+    <textarea id="macro"></textarea>
+    <div id="graph"></div>
+</body>
+
+</html>
