@@ -8,8 +8,8 @@
 
     <link rel="stylesheet" type="text/css" href="css/Site.css">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="js/main.js"></script>
     <script src="js/howler.js"></script>
+    <script src="js/main.js"></script>
 
     <title>Atlas Music Maker</title>
 </head>
@@ -24,7 +24,8 @@
     Toggle Key: <input type="text" id="toggleKey" value="F12"><br>
     Delay Time: <input type="text" id="delayTime" value="200"><br>
 
-    <input type="button" value="Create" onclick="writeMacro()" id="writeMacro"><br>
+    <input type="button" value="Create Macro" onclick="writeMacro()" id="writeMacro">
+    <input type="button" value="Play" onclick="ResumeSong()" id="songToggle"><br>
     <textarea id="macro" style="width:100%; height: 100%;"></textarea>
     <div id="graph"></div>
 </body>
