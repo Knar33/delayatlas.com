@@ -14,8 +14,39 @@
     <title>Atlas Music Maker</title>
 </head>
 
-<body>
-    <img src="notes.png"><br>
+<body>    
+    <svg class="piano" height="230" width="1000">
+        <polygon onclick="piano[0].play()" points="335,10 365,10 365,100 380,100 380,220 335,220 335,10" class="white" data-key="70" id="f"/>
+        <polygon onclick="piano[1].play()" points="365,10 395,10 395,100 365,100 365,10" class="black" data-key="51" id="f_sharp"/>
+        <polygon onclick="piano[2].play()" points="380,100 395,100 395,10 410,10 410,100 425,100 425,220 380,220 380,100" class="white" data-key="71" id="g"/>
+        <polygon onclick="piano[3].play()" points="410,10 440,10 440,100 410,100 410,10" class="black" data-key="52" id="g_sharp"/>
+        <polygon onclick="piano[4].play()" points="425,100 440,100 440,10 455,10 455,100 470,100 470,220 425,220 425,100" class="white" data-key="72" id="a"/>
+        <polygon onclick="piano[5].play()" points="455,10 485,10 485,100 455,100 455,10" class="black" data-key="53" id="a_sharp"/>5
+        <polygon onclick="piano[6].play()" points="470,100 485,100 485,10 515,10 515,220 470,220 470,100" class="white" data-key="74" id="b"/>
+        <polygon onclick="piano[7].play()" points="515,10 545,10 545,100 560,100 560,220 515,220 515,10" class="white" data-key="82" id="key5"/>
+        
+        <polygon onclick="piano[8].play()" points="545,10 575,10 575,100 545,100 545,10" class="black" data-key="54" id="key4"/>
+        <polygon onclick="piano[9].play()" points="560,100 575,100 575,10 590,10 590,100 605,100 605,220 560,220" class="white" data-key="84" id="key5"/>
+        
+        <polygon onclick="piano[10].play()" points="590,10 620,10 620,100 590,100 590,10" class="black" data-key="55" id="key4"/>
+        <polygon onclick="piano[11].play()" points="605,100 620,100 620,10 650,10 650,220 605,220 605,100" class="white" data-key="89" id="key5"/>        
+        <polygon onclick="piano[12].play()" points="650,10 680,10 680,100 695,100 695,220 650,220 650,10" class="white" data-key="85" id="key5"/>
+        
+        <text onclick="piano[0].play()" x="346" y="200" font-size="14" fill="black">a</text>
+        <text onclick="piano[1].play()" x="373" y="90" font-size="14" fill="white">w</text>
+        <text onclick="piano[2].play()" x="400" y="200" font-size="14" fill="black">s</text>
+        <text onclick="piano[3].play()" x="415" y="90" font-size="14" fill="white">e</text>
+        <text onclick="piano[4].play()" x="435" y="200" font-size="14" fill="black">d</text>
+        <text onclick="piano[5].play()" x="461" y="90" font-size="14" fill="white">r</text>
+        <text onclick="piano[6].play()" x="478" y="200" font-size="14" fill="black">f</text>
+        <text onclick="piano[7].play()" x="525" y="200" font-size="14" fill="black">y</text>
+        <text onclick="piano[8].play()" x="552" y="90" font-size="14" fill="white">y</text>
+        <text onclick="piano[9].play()" x="573" y="200" font-size="14" fill="black">h</text>
+        <text onclick="piano[10].play()" x="596" y="90" font-size="14" fill="white">u</text>
+        <text onclick="piano[11].play()" x="613" y="200" font-size="14" fill="black">j</text>
+        <text onclick="piano[12].play()" x="661" y="200" font-size="14" fill="black">i</text>
+    </svg><br>
+    </svg><br>
     Enter a song below to generate an autohotkey script. The keys are awsedrfgyhuji, to skip a beat use a space, and to sustain a note use a dash - for as many extra beats you want to sustain. <br>
     
     You can change the delay time and the toggle key that starts/stops the macro. <br><br>
