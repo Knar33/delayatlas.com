@@ -22,7 +22,7 @@ var currentInstrument = piano['a'];
 function writeMacro() {
     pauseSong();
     currentNote = 0;
-    song = $("#song").val() + " ";
+    song = $("#song").val().toLowerCase() + " ";
     delayTime = parseInt($("#delayTime").val(), 10);
     var toggleKey = $("#toggleKey").val();
     
