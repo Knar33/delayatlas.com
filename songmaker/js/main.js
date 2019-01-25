@@ -108,6 +108,7 @@ function pauseSong() {
 }
 
 function ResumeSong() {
+    writeMacro();
     PlaySong();
     $("#songToggle").attr("onClick", "pauseSong()").attr("value", "Pause");
 }
